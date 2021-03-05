@@ -7,7 +7,8 @@ export default function Table({ columns, data }) {
         getTableBodyProps,
         headerGroups,
         rows,
-        prepareRow
+        prepareRow,
+        
     } = useTable({
         columns,
         data

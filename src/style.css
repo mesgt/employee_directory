@@ -16,10 +16,15 @@ th {
 
 td {
     text-align: center;
+    padding: 10px;
 }
 
 .ReactTable {
     border-bottom: solid 10px black;
+}
+
+img {
+    border-radius: 10px;
 }
 
 
