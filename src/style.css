@@ -1,0 +1,25 @@
+.App {
+    background-color: rgb(217, 228, 231);
+}
+
+table {
+background-color: beige;
+position: absolute;
+width: 100%;
+}
+
+th {
+    background-color: rgb(99, 142, 197);
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+
+td {
+    text-align: center;
+}
+
+.ReactTable {
+    border-bottom: solid 10px black;
+}
+
+

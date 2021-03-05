@@ -1,7 +1,8 @@
 import React, { useMemo, useState, useEffect } from "react";
 import Table from "./components/Table";
-import "./App.css";
+// import "./App.css";
 import axios from "axios";
+import Header from "./components/Header";
 // import API from "../utils/API";
 // import EmployeeDirectoryContainer from "./components/EmployeeDirectoryContainer";
 
@@ -23,13 +24,13 @@ function App() {
   const columns = useMemo(
     () => [
       {
-        Header: "Employee Directory",
+        Header: " ",
         columns: [
           {
             Header: "Picture",
             // accessor: "picture.thumbnail",
             Cell:(row)=>{
-              console.log(row)
+              // console.log(row)
               return <img alt="profile" src={row.row.original.picture.thumbnail} />
             }
           },
@@ -55,7 +56,9 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Table columns={columns} data={data} />
+      
     </div>);
 }
 

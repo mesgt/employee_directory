@@ -14,10 +14,10 @@ export default function Table({ columns, data }) {
     });
 
     return (
-        <table {...getTableProps()} >
+        <table {...getTableProps()} className="ReactTable">
             <thead>
                 {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()}>
+                    <tr {...headerGroup.getHeaderGroupProps()} className="">
                         {headerGroup.headers.map(column => (
                             <th {...column.getHeaderProps()}>{column.render("Header")}</th>
                         ))}
