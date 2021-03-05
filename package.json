@@ -2,7 +2,7 @@
   "name": "employee_directory",
   "version": "0.1.0",
   "private": true,
-  ";homepage": "https://mesgt.github.io/employee_directory/",
+  "homepage": "https://mesgt.github.io/employee_directory/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
