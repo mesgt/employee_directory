@@ -1,10 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import Table from "./components/Table";
-// import "./App.css";
 import axios from "axios";
 import Header from "./components/Header";
-// import API from "../utils/API";
-// import EmployeeDirectoryContainer from "./components/EmployeeDirectoryContainer";
 
 const BASEURL = "https://randomuser.me/api/?results=25&nat=us";
 
@@ -15,8 +12,6 @@ function App() {
   useEffect(() => {
     (async () => {
       const { data } = await axios(BASEURL);
-      // console.log(data)
-      // console.log(data.results)
       setData(data.results);
     })();
   }, []);
@@ -28,15 +23,12 @@ function App() {
         columns: [
           {
             Header: "Picture",
-            // accessor: "picture.thumbnail",
             Cell:(row)=>{
-              // console.log(row)
               return <img alt="profile" src={row.row.original.picture.thumbnail} />
             }
           },
           {
             Header: "Name",
-            // accessor: "name.last"
             Cell: (row)=> {
               return <span>{row.row.original.name.first} {row.row.original.name.last}</span>
             }

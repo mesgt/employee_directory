@@ -7,8 +7,7 @@ export default function Table({ columns, data }) {
         getTableBodyProps,
         headerGroups,
         rows,
-        prepareRow,
-        
+        prepareRow
     } = useTable({
         columns,
         data
@@ -18,7 +17,7 @@ export default function Table({ columns, data }) {
         <table {...getTableProps()} className="ReactTable">
             <thead>
                 {headerGroups.map(headerGroup => (
-                    <tr {...headerGroup.getHeaderGroupProps()} className="">
+                    <tr {...headerGroup.getHeaderGroupProps()}>
                         {headerGroup.headers.map(column => (
                             <th {...column.getHeaderProps()}>{column.render("Header")}</th>
                         ))}
