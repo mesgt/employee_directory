@@ -1,40 +1,52 @@
+import React, { useMemo, useState, useEffect } from "react";
+import Table from "./components/Table";
 import "./App.css";
 import axios from "axios";
 // import API from "../utils/API";
-import Table from "./Table";
-import React, { useMemo, useState, useEffect } from "react";
 // import EmployeeDirectoryContainer from "./components/EmployeeDirectoryContainer";
+
+const BASEURL = "https://randomuser.me/api/?results=25&nat=us";
 
 function App() {
   const [data, setData] = useState([]);
-  
-  useEffect(()=> {
-    (async() => {
-      const result = await axios("https://randomuser.me/api/?result=25");
-      setData(result.data);
+
+  //calling API
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios(BASEURL);
+      // console.log(data)
+      // console.log(data.results)
+      setData(data.results);
     })();
   }, []);
 
   const columns = useMemo(
-    ()=> [
+    () => [
       {
-        Header: "Picture",
+        Header: "Employee Directory",
         columns: [
           {
             Header: "Picture",
-            accessor: "data.results[0].picture.thumbnail"
+            // accessor: "picture.thumbnail",
+            Cell:(row)=>{
+              console.log(row)
+              return <img alt="profile" src={row.row.original.picture.thumbnail} />
+            }
           },
           {
             Header: "Name",
-            accessor: "data.results[0].name"
+            // accessor: "name.last"
+            Cell: (row)=> {
+              return <span>{row.row.original.name.first} {row.row.original.name.last}</span>
+            }
           },
           {
             Header: "Phone",
-            accessor: "data.results[0].phone"
+            accessor: "phone"
           },
           {
             Header: "email",
-            accessor: "data.results[0].email"
+            accessor: "email"
           }
         ]
       },
@@ -42,9 +54,9 @@ function App() {
   );
 
   return (
-  <div className="App">
-    <Table columns={columns} data={data} />
-  </div>);
+    <div className="App">
+      <Table columns={columns} data={data} />
+    </div>);
 }
 
 export default App;
