@@ -1,38 +1,50 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Employee Directory
 
-## Description 
-Using Random User API, 25 users are displayed in a table with their photo, first and last name, phone number and email addrress. This app was put together using React Table and hooks. Some in-line and linked CSS styling add a little bit of personality to the page.  
-
-## Links 
-Published site: https://mesgt.github.io/employee_directory/
-
-## Table of Contents
-
-* [Description](#Description) 
-* [Links](#Links)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Credits](#Credits)
-* [License](#License)
-* [Badges](#Badges)
+Employee information at your finger tips. 
 
 
-## Installation
-N/A
+## Deployed Link
 
-## Usage
-N/A
+https://mesgt.github.io/employee_directory/
+
+
+# Application Details
+
+## Purpose
+
+Every company needs a good way to display their employee's information. This website does just that.  
+
+
+## Description
+
+Using Random User API, 25 users are displayed in a table with their photo, first and last name, phone number and email addrress. This app was put together using React Table and hooks. Some in-line and linked CSS styling add a little bit of personality to the page. 
 
 ![application](public/images/screenshot.png)
 
-## Credits
-N/A
+
+## Technologies
+
+<li>Random User API </li>
+<li>React Table </li>
+<li>Hooks </li>
+
+
+## Future Development
+
+Ideas for future development include:
+* Enable employee sorting by name
+
 
 ## License
-The Unlicense
 
-## Badges
-N/A
+Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
+
+## GitHub
+
+https://github.com/mesgt/charmeleon
+
 
 ## Contributing
 
